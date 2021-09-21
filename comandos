@@ -1,0 +1,8 @@
+# Visualizar histórico por versões de Deploymenyt
+kubectl rollout history deployment <deployment-name>
+
+# Escrever/Alterar texto de uma revisão de um Deployment
+kubectl annotate deployment <deployment-name> kubernetes.io/change-cause="<version-description>"
+
+# Voltar um Deployment para um revisão específica
+kubectl undo deployment <deployment-name> --to-revision=<version-to-return>
