@@ -1,0 +1,4 @@
+ReplicaSet:
+    "Estrutura que pode encapsular/gerenciar um ou mais pods"
+
+    Desired pods vs Ready Pods
