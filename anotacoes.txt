@@ -7,3 +7,6 @@ Deployment:
     -  Camada acima de um ReplicaSet
     -  Define ReplicaSets
     -  Gerenciar imagens, versionamentos com históricos
+
+    * ReplicaSet são criados automaticamente quando um Deployment é criado.
+    * Pods normalmente são criados através de Deployments, e não individualmente.
