@@ -2,3 +2,8 @@ ReplicaSet:
     "Estrutura que pode encapsular/gerenciar um ou mais pods"
 
     Desired pods vs Ready Pods
+
+Deployment:
+    -  Camada acima de um ReplicaSet
+    -  Define ReplicaSets
+    -  Gerenciar imagens, versionamentos com históricos
