@@ -10,3 +10,8 @@ Deployment:
 
     * ReplicaSet são criados automaticamente quando um Deployment é criado.
     * Pods normalmente são criados através de Deployments, e não individualmente.
+
+=== Persistência de dados ===
+
+Volumes:
+    Possuem ciclos de vida independentes de containers, porém, são dependentes do
