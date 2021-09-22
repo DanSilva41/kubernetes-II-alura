@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-2
+spec:
+  accessModes:
+    - ReadWriteOnce # Apenas um Pod por ver pode ler e escrever
+    # - ReadWriteMany # Múltiplos Pods podem ler e escrever
+    # - ReadOnlyMany # Múltiplos pods podem ler de uma vez só
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: slow
+  

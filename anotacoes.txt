@@ -20,5 +20,15 @@ Volumes:
 PersistentVolumes:
     - Persistem dados de pods como um todo
     - Possuem ciclo de vida independente de quaisquer outros recursos, inclusive pods
+    - Independente do POD
+    - Responsável por abstrair como o cloud provider armazena os dados
 
     * Que precisamos de um PersistentVolumeClaim para acessar um PersistentVolume
+
+PersistentVolumeClaim:
+    - Serve como passaporte para o POD acessar o PV
+
+StorageClass:
+    - Gerencia os discos e volumes dinamicamente
+
+    O PersistentVolume é criado dinamicamente assim que um PVC é vinculado em um StorageClass
