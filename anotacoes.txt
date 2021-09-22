@@ -14,4 +14,11 @@ Deployment:
 === Persistência de dados ===
 
 Volumes:
-    Possuem ciclos de vida independentes de containers, porém, são dependentes do
+    - Volumes possuem ciclo de vida independente dos containers, porém, vinculados aos pods.
+    - Volumes persistem dados de containers dentro de pods e permitem o compartilhamento de arquivo dentro dos pods
+
+PersistentVolumes:
+    - Persistem dados de pods como um todo
+    - Possuem ciclo de vida independente de quaisquer outros recursos, inclusive pods
+
+    * Que precisamos de um PersistentVolumeClaim para acessar um PersistentVolume
