@@ -32,3 +32,9 @@ StorageClass:
     - Gerencia os discos e volumes dinamicamente
 
     O PersistentVolume é criado dinamicamente assim que um PVC é vinculado em um StorageClass
+
+StateFul Set:
+    Destinados a POD's que precisam manter o seu estado.
+
+    - Usam PersistentVolumeClaim e PersistentVolume para persistência de dados
+    - Idenficação única para cada pod (o que ajuda caso seja recriado)
