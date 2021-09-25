@@ -45,9 +45,15 @@ Probes:
     "Apesar do POD está saudável(ativo), nossa aplicação não responde como esperado! Como o Kubernetes pode
     saber que o container dentro do POD deve ser reiniciado?"
 
-    LivenessProbe:
+    Liveness Probe:
         Saber quando o nosso POD está pronto realmente para uso e garantiar uma prova de uso
 
-    ReadinessProbe:
+    Readiness Probe:
         "O container dentro do nosso POD pode ainda não estar 100% pronto para receber requisições"
             (Ex.: scripts de inicialização)
+    Startup Probe:
+        "Às vezes, você precisa lidar com aplicativos legados que podem exigir um tempo de inicialização adicional na primeira inicialização.
+        Nesses casos, pode ser complicado configurar os parâmetros de teste de atividade sem comprometer a resposta rápida aos deadlocks que motivaram tal teste.
+        O truque é configurar uma investigação de inicialização com o mesmo comando, verificação de HTTP ou TCP, com um failureThreshold * periodSeconds suficiente para cobrir o pior caso de tempo de inicialização."
+
+    
