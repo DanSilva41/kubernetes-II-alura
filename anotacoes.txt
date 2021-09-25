@@ -47,3 +47,7 @@ Probes:
 
     LivenessProbe:
         Saber quando o nosso POD está pronto realmente para uso e garantiar uma prova de uso
+
+    ReadinessProbe:
+        "O container dentro do nosso POD pode ainda não estar 100% pronto para receber requisições"
+            (Ex.: scripts de inicialização)
