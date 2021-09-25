@@ -35,6 +35,8 @@ spec:
             periodSeconds: 10 # De quando enquanto tempo eu quero fazer essa validação
             failureThreshold: 5 # Nº máximo de falhas que eu toleto antes de ignorar essa validação
             initialDelaySeconds: 3  # A partir de quanto eu quero que seja executada a primeira validação
-          
+          resources:
+            requests:
+              cpu: 10m
 
      

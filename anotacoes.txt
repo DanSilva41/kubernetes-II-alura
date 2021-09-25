@@ -45,6 +45,10 @@ Probes:
     "Apesar do POD está saudável(ativo), nossa aplicação não responde como esperado! Como o Kubernetes pode
     saber que o container dentro do POD deve ser reiniciado?"
 
+    O Kubernetes nem sempre tem como saber se a aplicação está saudável.
+
+    Além do HTTP, também podemos fazer verificações via TCP.
+
     Liveness Probe:
         Saber quando o nosso POD está pronto realmente para uso e garantiar uma prova de uso
 
@@ -55,5 +59,27 @@ Probes:
         "Às vezes, você precisa lidar com aplicativos legados que podem exigir um tempo de inicialização adicional na primeira inicialização.
         Nesses casos, pode ser complicado configurar os parâmetros de teste de atividade sem comprometer a resposta rápida aos deadlocks que motivaram tal teste.
         O truque é configurar uma investigação de inicialização com o mesmo comando, verificação de HTTP ou TCP, com um failureThreshold * periodSeconds suficiente para cobrir o pior caso de tempo de inicialização."
+
+HorizontalPodAutoscaler: 
+    "Capaz de escalar automaticamente o número de pods em determinados recursos, baseado
+    na observação da CPU"
+
+    Responsáveis por definir em quais circunstâncias escalaremos nossa aplicação automaticamente.
+
+    É possível utlizar um Servidor de Métricas
+
+    (minikube addons enable metrics-server)
+
+    Se o tipo de métrica for por CPU, o HPA visará manter o consumo médio o mais próximo do desejado.
+
+VerticalPodAutoscaler:
+    Remove a necessidade de definir limites e pedidos por recursos do sistema, como cpu e memória. 
+    Quando definido, ele define os consumos de maneira automática baseada na utilização em cada um dos nós, além disso, quanto tem disponível ainda de recurso.
+
+    https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler
+
+    GCP: https://cloud.google.com/kubernetes-engine/docs/concepts/verticalpodautoscaler
+    AWS: https://docs.aws.amazon.com/eks/latest/userguide/vertical-pod-autoscaler.html
+
 
     
