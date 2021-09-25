@@ -21,4 +21,12 @@ spec:
           envFrom:
             - configMapRef:
                 name: portal-configmap
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            periodSeconds: 10 # De quando enquanto tempo eu quero fazer essa validação
+            failureThreshold: 3 # Nº máximo de falhas que eu toleto antes de executar o reinício desse container
+            initialDelaySeconds: 20  # A partir de quanto eu quero que seja executada a primeira validação
+
      

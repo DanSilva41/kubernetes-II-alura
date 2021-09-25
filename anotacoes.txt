@@ -33,8 +33,17 @@ StorageClass:
 
     O PersistentVolume é criado dinamicamente assim que um PVC é vinculado em um StorageClass
 
+    Clusters possuem StorageClasses "default" e podem ser usados automaticamente se não definirmos qual será utilizado
+
 StateFul Set:
     Destinados a POD's que precisam manter o seu estado.
 
     - Usam PersistentVolumeClaim e PersistentVolume para persistência de dados
     - Idenficação única para cada pod (o que ajuda caso seja recriado)
+
+Probes:
+    "Apesar do POD está saudável(ativo), nossa aplicação não responde como esperado! Como o Kubernetes pode
+    saber que o container dentro do POD deve ser reiniciado?"
+
+    LivenessProbe:
+        Saber quando o nosso POD está pronto realmente para uso e garantiar uma prova de uso
