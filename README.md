@@ -9,3 +9,7 @@ The course covered the following topics:
 4. About StorageClasses
 5. Checking status with Probes
 6. How to scale with Horizontal Pod Autoscaler
+
+[Certified URL][]
+
+[Certified URL]: https://cursos.alura.com.br/certificate/17e703a0-9587-49fa-9433-e3140d1029c0
